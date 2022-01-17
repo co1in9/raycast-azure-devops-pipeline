@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "azure-devops-pipelines",
+  "title": "Azure DevOps Pipelines",
+  "description": "Azure DevOps Pipelines",
+  "icon": "azure-devops-pipeline.png",
+  "author": "co1in9",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "recent_builds",
+      "title": "Recent Builds",
+      "subtitle": "Azure DevOps Pipelines",
+      "description": "List recent builds",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.27.0",
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "open": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  },
+  "preferences": [
+    {
+      "name": "organization",
+      "type": "textfield",
+      "required": true,
+      "title": "Your Azure DevOps Org",
+      "description": "https://dev.azure.com/{organization}/{project}",
+      "placeholder": "Your Azure DevOps Organization"
+    },
+    {
+      "name": "project",
+      "type": "textfield",
+      "required": true,
+      "title": "Your Azure DevOps project",
+      "description": "https://dev.azure.com/{organization}/{project}",
+      "placeholder": "Your Azure DevOps textfield"
+    },
+    {
+      "name": "pat",
+      "type": "textfield",
+      "required": true,
+      "title": "Your Azure DevOps PAT",
+      "description": "Personal Access Tokens",
+      "placeholder": "Personal Access Tokens"
+    }
+  ]
+}
